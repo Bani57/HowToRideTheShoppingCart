@@ -127,25 +127,45 @@ We also created the same plot for the average median product price:
 # **3. Don't forget to exploit those weekend discounts!**
 ## *Is this even necessary to mention...*
 
-*TODO: Add analyses on coupon usage and spending based on day of the week*
+#### Coupon usage
+
+We noticed that campaigns play a major role in how people spend their money. In deriving the true amount of money that households spend on every visit to the store, we took into account the coupon value. But what is the total amount used and does it vary with the income category?
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_44.html"></iframe>
 {% endraw %}
 
+Coupon value is negative, since it gives a discount to the price. On this bar plot, we see a somewhat unexpected trend. People with medium to upper medium income use more coupons as opposed to the people with lower income. Interesting sight is that people with high income are also heavy users of coupons.
+
+#### Daily Expenses
+
+Interesting information can be found by looking into the day of the week when purchases have been made. While we don't know the exact date (and thereby day of the week) from when the data was recorded, it is enough to group the transactions by the *day number* module *7*, in order to plot the transactions throughout an average week. 
+
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_46.html"></iframe>
 {% endraw %}
 
+While we cannot be certain about which day this weeks starts with, it is to be assumed that that the two days with a larger amount of transactions are either Friday and Saturday or Saturday and Sunday. If the data is from the US, it is likely that most purchases have been made on Sunday, as people tend to have more time for shopping, and the stores are usually open on Sunday. We contacted the company which provides this dataset for more information about such details, and are currently waiting for a response. 
+
 # **4. Buy only what you need, or at least what you think you need.**
 ## *The types of products you buy can say a lot about you...*
 
-*TODO: Add analyses on income/expenses depending on product categories*
+#### Most Purchased Product
+
+We want to find out on which products the different households spent most of their income in, and how this depends on their income categories. After analyzing the data, we found that the households from every category spent most of their money on gasoline. Let us see the distribution in USD for every income category:
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_53.html"></iframe>
 {% endraw %}
 
+The distribution is highly concentrated around the middle to upper middle income categories. The reason is that households with lower income can't afford owning a vehicle, however the reason for the upper income is somewhat unclear. It could be that they use other means of transportation required by their job.
+
+Setting gasoline aside, we are also interest in how the expenses are distributed in the other product categories. For this, we will use a sankey plot because it is an excellent way to visualize flow of information between two subsets. From it, we will have a clear idea about how the expenses from income groups map to product categories. We will use 200 most purchased products ordered by their quantity.  We can easily visualize how the quantity of the purchased products is distributed and later search for patterns in the expenditure.
+
+TODO: add the Sanky plot
+
+
+TODO: the Engles curves. Didn't we say we wanna use the ones from the main.ipynb notebook, as the polynomial fits weren't exactly great?
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_60.html"></iframe>
 {% endraw %}
@@ -153,27 +173,60 @@ We also created the same plot for the average median product price:
 # **5. Know who you are, but more importantly who you are not.**
 ## *Always stick to your family values...*
 
-*TODO: Add analyses on income/expenses depending on demographics*
+### Demographic Analysis of Household Groups
+
+In order to understand how family values influence the balance between household's expenses and income, we will analyze the demographic properties across 4 groups of households:
+
+1. Percent of households with low income and low expenses: 0.4082
+2. Percent of households with low income and high expenses: 0.3109
+3. Percent of households with high income and low expenses: 0.0924
+4. Percent of households with high income and high expenses: 0.1885
+
+These groups were generated using the average income and average expenses. We split the households into: below (or above) average income and below (or above) average expenses.
+
+From the age distribution of the household groups, we can make a few interesting observations. Among the households with the youngest members there is not a lot of variety in the income-expenses balance. Among the households with members of younger working ages high expenses seem to dominate. As we move to the households with older members lower expenses are more prevalent.
+
+
+
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_65.html"></iframe>
 {% endraw %}
 
+#### Marital Status
+
+For clarification, according to the dataset documentation the marital status codes `A`, `B`, and `U` stand for `Married`, `Single` and `Unknown` respectively. Interestingly, this plot efficiently captures classical differences between married and single life, as we observe that households with married members have more often lower income and must balance with lower expenses, while it is completely opposite for single member households, as they more frequently have higher income and are able to indulge in higher expenses. 
+
+
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_66.html"></iframe>
 {% endraw %}
+
+#### Homeowner Type
+
+Analyzing the distribution of the type of homeownership we again obtain expected results, as it is understandable that it is most probable for households who are able to afford their own place of residence to have higher income and expenses, while renters usually have better sense of utilizing their limited income. 
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_67.html"></iframe>
 {% endraw %}
 
+#### Household Composition
+Among the different household compositions recorded in the data, we do not observe a lot of variety and this feature is not a good discriminator. However, we do observe two interesting discrepancies which can also be expected: couples with no children have the highest chance to be in the group with the highest income and expenses, while single parents tend to have a "harder time".
+
+
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_68.html"></iframe>
 {% endraw %}
 
+#### Household Size
+The household size feature also displays very little significance for group distinction across different values. However, we can observe a trend that as the household size increases the probability of having lower income and expenses decreases, as only households with higher income can afford to have more children, but with that their expenses also increase.
+
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_69.html"></iframe>
 {% endraw %}
+
+#### Number of Children
+The demographic records for the number of children can be inferred from previous features such as household size and household composition and as such in the plot we observe a similar trend as in the previous analysis of household size.
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_70.html"></iframe>
