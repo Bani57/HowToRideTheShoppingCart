@@ -19,29 +19,29 @@ In this story we try to address the following research question: What is the int
 3. Information about transactions, including the products bought, their prices, time of purchase, ....
 
 
-#### There are several factors that contribute to how people spend their annual income:
-
-1. Income category
+#### Amogst others, we expect the following factors to be decisive in how peole spend their annual income:
+1. Household income:
     - In our dataset we have several categories ranging from below 15,000 to over 250,000 USD p.a.
-2. Shopping behavior
+2. Shopping habits
     - It mainly depends on the day of the week
-2. Campaigns play a major role
+2. Advertisement campaigns
     - Some households take active participation in campaigns which significantly lowers the expenses
 3. Products vary in price
     - Some products are much more expensive than others, nonetheless their purchase is unavoidable
 4. Households preferences
     - Households with lower income tend to buy low-budget goods, as opposed to households with higher income that buy high-end goods (like organic food)
 5. Demographics
+6. Number and ages of children in the family
 
 
 
-# **1. Are you sure you're earning enough a year to be buying that?**
+# **1. Are you sure you're earning enough to buy that fancy organic avocado?**
 ## *You know, not everyone is in the top 1%...[^1]*
-[^1]: 99% to be precise :)
+[^1]: 99% of all people are not in the top 1%, to be precise :)
 
-We noted that one of the major factors in determining the household expenses is the household income category. The main challange in utilizing this information from the datasets was the fact that we didn't have exact nummeric data about the household incomes. Instead, we were provided only with different income categories. Looking on the bright side, there is meaningful ordering of the categories as they are intervals. The main challenge here was finding an appropiare nummerical representation for each income category. We did so by fitting the data to the lognormal distribution. Even before seeing the income distirbution, we already assumeed that it would be log-normal, as this is the usual distribution of positiv random variables. This follows from the central limit theorem, applied to variables which cannot be negative (like household income). 
+As expected, our analysis showed that one of the major factors in determining the household expenses is the annual income of a given household. The main challange in utilizing this information from the datasets was the fact that we didn't have exact nummeric data about the household incomes. Instead, we were provided only with different income categories. Looking on the bright side, there is meaningful ordering of the categories as they are intervals. The main challenge here was finding an appropiare nummerical representation for each income category. We did so by fitting the data to the lognormal distribution. Even before seeing the income distirbution, we already assumeed that it would be log-normal, as this is the usual distribution of positiv random variables. This follows from the central limit theorem, applied to variables which cannot be negative (like household income). 
 
-Naively, we could simply plot the number of household in every income category and get the following plot:
+Naively, we could simply plot the number of households contained  within every income category and get the following plot:
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_20.html"></iframe>
@@ -61,11 +61,11 @@ By just looking at this plot, we already get the feeling that it looks like the 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_26.html"></iframe>
 {% endraw %}
 
-# **2. Don't throw away the bills!**
+# **2. Don't throw away your bills!**
 ## *Statistics is your friend...*
 
 #### Average bill amount
-To measure the spending habits of the households, we compute the average amount of each households' bills. Every household visit to a store is uniquely identified. We do this in two steps:
+In order to measure the spending habits of different households, we compute the average amount of each households' bills. Every household visit to a store is uniquely identified in the dataset. We can do this in two steps:
 
 1. We sum the total bill amounts for each household. 
 2. We average across all visits a given houshold made over the whole time period.
@@ -79,13 +79,12 @@ Here you can see the distribution of the average bill amount. On average, people
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_29.html"></iframe>
 {% endraw %}
-At the same time, we are also interested in finding the average number of products purchased per household. This is relevant as large families will alsways have higher bills per visit to the supermarket, simple because they have to buy food for mor family members. At the same time, smaller and wealthier families (perhaps without childern), are expected to purchase fewer products but often for higher prices. On average, people buy around 10 producs per supermarket visit. 
+At the same time, we are also interested in finding the average number of products purchased per household. This is relevant as large families will always have higher bills per visit to the supermarket, simply because they have to buy food for more family members. At the same time, smaller and wealthier families (perhaps without childern), are expected to purchase fewer products but often for higher prices. On average, people buy around 10 producs per supermarket visit. 
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_31.html"></iframe>
 {% endraw %}
-
-While the average number of producs purchased is a very good indicatior of a households' spending habits, we argue that the avarege bill amount is actualy dependend ot two very different parameters. It is to be expected that the average numebr of products is proportional to the household size (after all, rich and poor families drink and eat rougly the same amounts of food [^y]). At the same time, the average price per product purchased, is expected to be closer related to the wealth of a given household (for example, wealthy families might be inclined to purchase more expensive wine, or buy organic food). The total bill amount, is rougly equal to the numbe of producs purchased, and the price of the average product. Therefore small wealthy families could have similar total bill amounts as poor large families.  Therefore, we are interested in the distribution of the average median product price. We use the meadian for calulating the average, as it is more robust to outliers.  
+While the average number of producs purchased is a very good indicatior of a households' spending habits, we argue that the avarege bill amount is actualy dependend ot two very different parameters. It is to be expected that the average numebr of products is proportional to the household size (after all, rich and poor families drink and eat rougly the same amounts of food[^y]). At the same time, the average price per product purchased, is expected to be closer related to the wealth of a given household (for example, wealthy families might be inclined to purchase more expensive wine, or buy organic food). The total bill amount, is rougly equal to the numbe of producs purchased, and the price of the average product. Therefore small wealthy families could have similar total bill amounts as poor large families.  Therefore, we are interested in the distribution of the average median product price. We use the meadian for calulating the average, as it is more robust to outliers.  
 
 [^y]: Assuming nobody is starving due to poverty in the United States
 
@@ -93,17 +92,19 @@ While the average number of producs purchased is a very good indicatior of a hou
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_33.html"></iframe>
 {% endraw %}
 
-TODO
-
-{% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_34.html"></iframe>
-{% endraw %}
-
-TODO
+As we all learned in elementary school: the average is equal to the sum divided by the quantity. When it comes to grocery shopping, this is no different. The average bill we pay in supermarkets will be dependent on how many items we purchase, and what their average price is. Obviously, there exists a 1:1 correspondince between the number of items purchased and the total bill we have to pay at chechout. As the variation in price of everyp-day items is not large, the variance is vary small:
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_35.html"></iframe>
 {% endraw %}
+
+Things become less obvjous, when we compare the average median product price, with the average bill amount. The main factor causing uncertainty here is the number of products, which warries greatly. It depends on how often we go shopping and how many family members we need to feed with one trip to the local supermarket. Therefore, we have a very significant varriance in the following plot:
+{% raw %}
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_34.html"></iframe>
+{% endraw %}
+
+
+
 
 ### Analysis of the Joint Distribution 
 
