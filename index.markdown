@@ -104,12 +104,12 @@ While the average number of purchased products is a really good indicator of a h
 One of the first things we learned in elementary school is a precious rule applicable in a daily life: the average is equal to the sum divided by the quantity. When it comes to grocery shopping, this is no different. The average bill we pay in supermarkets will be dependent on how many items we purchase and what is their average price. Obviously, there exists a 1:1 correspondence between the number of purchased items and the total bill we have to pay at the checkout. As the variation in price of everyday items is not large, the variance is very small:
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_35.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_34.html"></iframe>
 {% endraw %}
 
 Things become less obvious when we compare the average median product price with the average bill amount. The main factor which causes uncertainty here is the number of products, which varies greatly. It depends on how often we go shopping and how many family members we need to feed with a one "go" to the local supermarket. Thereby, we have a very significant variance in the following plot:
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_34.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_35.html"></iframe>
 {% endraw %}
 
 
@@ -122,7 +122,7 @@ Given our insight into how much money, on average, households spend during each 
 Using a boxplot we can view the distribution of the statistic across each household income category and perform a comparison very efficiently.
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_37.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_38.html"></iframe>
 {% endraw %}
 
 It is surprizing to see, that  extreme spending were mostly observed for medium and lower income households. After having a closer look at the data, we found out that this is mainly due to the fact that there are significantly more househlolds in the average-income range, as in the high-income range[^k]. Therefore, we also expect more outliers in the average-income range.
@@ -132,7 +132,7 @@ It is surprizing to see, that  extreme spending were mostly observed for medium 
 We also created the same plot for the average median product price:
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_41.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_42.html"></iframe>
 {% endraw %}
 This is relevant, as we expect wealthier households not necessarily to buy larger quanitites of products (which is mostly responsible for the average bill amount), but rather to purchase individual more expensive items. 
 
@@ -146,7 +146,7 @@ Households which regularly participate in loyality programs, may end up paying l
 Let us find out what the total amount of coupons used is and how it varies with annual income!
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_44.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_45.html"></iframe>
 {% endraw %}
 
 The reason why coupon values are negative is, becasue they decrease the final bill. On this bar plot, we see a somewhat unexpected trend. 
@@ -162,7 +162,7 @@ Interesting information can be found by looking into the day of the week when pu
 While we don't know the exact date (and thereby day of the week) from when the data was recorded, it is enough to group the transactions by the *day number* module *7*, in order to plot the transactions throughout an average week. 
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_46.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_47.html"></iframe>
 {% endraw %}
 
 While we cannot be certain about which day this weeks starts with, it is to be assumed that that the two days with a larger amount of transactions are either Friday and Saturday or Saturday and Sunday. If the data is from the US, it is likely that most purchases have been made on Sunday, as people tend to have more time for shopping, and the stores are usually open on Sunday. We contacted the company which provides this dataset for more information about such details, and are currently waiting for a response. 
@@ -175,7 +175,7 @@ While we cannot be certain about which day this weeks starts with, it is to be a
 We want to find out on which products the different households spent most of their income in, and how this depends on their income categories. After analyzing the data, we found that the households from every category spent most of their money on gasoline. Let us see the distribution in USD for every income category:
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_53.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_54.html"></iframe>
 {% endraw %}
 
 The distribution is highly concentrated around the middle to upper middle income categories. The reason is that households with lower income can't afford owning a vehicle, however the reason for the upper income is somewhat unclear. It could be that they use other means of transportation required by their job.
@@ -187,7 +187,7 @@ TODO: add the Sanky plot
 
 TODO: the Engles curves. Didn't we say we wanna use the ones from the main.ipynb notebook, as the polynomial fits weren't exactly great?
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_60.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_61.html"></iframe>
 {% endraw %}
 
 # **5. Know who you are, but more importantly who you are not.**
@@ -206,7 +206,7 @@ We generated these groups using the average income and average expenses, by spli
 From the age distribution of the household groups, we can make a few interesting observations. Among the households with the youngest members there is not a lot of variety in the income-expenses balance. Among the households with members of younger working ages high expenses seem to dominate. As we move to the households with older members lower expenses are more prevalent.
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_65.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_66.html"></iframe>
 {% endraw %}
 
 
@@ -220,7 +220,7 @@ The datasets we used also contains information about the marital status of the i
 The following plot very effectively illustrates the usual differences between "single" and "married" life. We observed that households with married members have more often lower income and must balance with lower expenses, while the opposite is true for single member households, as they more frequently have higher income and are able to indulge in higher expenses. 
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_66.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_67.html"></iframe>
 {% endraw %}
 
 #### Homeowner Type
@@ -229,7 +229,7 @@ Another interesting future included in the dataset is, whether families own or r
 It is understandable that households, which are able to afford their own place of residence, entail probability of a higher income and expenses, while renters usually have better sense of utilizing their limited income.
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_67.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_68.html"></iframe>
 {% endraw %}
 
 #### Household Composition
@@ -239,7 +239,7 @@ This feature doesn't seemt o be a good discriminator.
 However, we do observe two interesting discrepancies which can also be expected: couples with no children have the highest chance to be in the group with the highest income and expenses, while single parents have a harder time paying their bills.
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_68.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_69.html"></iframe>
 {% endraw %}
 
 #### Household Size
@@ -249,7 +249,7 @@ This is so because only households with higher income can afford to have more ch
 Nevertheless, this circumstance makes their expenses increase as well.
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_69.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_70.html"></iframe>
 {% endraw %}
 
 #### The tradeoff between having children and having money
@@ -258,7 +258,7 @@ In this context, we observe in the plot a similar trend as in the previous analy
 Having children costs money!
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_70.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_71.html"></iframe>
 {% endraw %}
 
 # **The big picture**
