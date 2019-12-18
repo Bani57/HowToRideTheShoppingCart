@@ -120,8 +120,10 @@ Things become less obvious when we compare the average median product price with
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_35.html"></iframe>
 {% endraw %}
 
-
-
+We observe that the average number of products is uncorrelated also with the average median product price. This is expected as it follows from the other two results. So we have two pairs of uncorrelated statistics, however as the average bill amount is obviously more expressive than the number of products, the final decision is definitely to discard the latter.
+{% raw %}
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_36.html"></iframe>
+{% endraw %}
 
 ### Analysis of the Joint Distribution 
 Given our insight into how much money, on average, households spend during each visit to a supermarket and how the representative product price varies, we are interested to find out if the household income plays a crucial role in the spending habits. Our expectation is that it does, and that households with lower income spend less and buy cheaper (for example non-organic) products as opposed to households with higher income.
