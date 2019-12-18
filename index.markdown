@@ -134,7 +134,7 @@ This is relevant, as we expect wealthier households not necessarily to buy large
 Our analysis showed that campaigns play a major role in how people spend their money. 
 In deriving the true amount of money that households spend on every visit to their local supermarket, we took into account the coupon value. 
 Households which regularly participate in loyality programs, may end up paying less money, even if they purchase more expensive products. 
-Let us find out what the total amount of coupons used is and it varies with annual income!
+Let us find out what the total amount of coupons used is and how it varies with annual income!
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_44.html"></iframe>
@@ -182,32 +182,33 @@ TODO: the Engles curves. Didn't we say we wanna use the ones from the main.ipynb
 {% endraw %}
 
 # **5. Know who you are, but more importantly who you are not.**
-## *Always stick to your family values...*
 
 ### Demographic Analysis of Household Groups
 
 In order to understand how family values influence the balance between household's expenses and income, we will analyze the demographic properties across 4 groups of households:
 
-1. Percent of households with low income and low expenses: 0.4082
-2. Percent of households with low income and high expenses: 0.3109
-3. Percent of households with high income and low expenses: 0.0924
-4. Percent of households with high income and high expenses: 0.1885
+1. Households with low income and low expenses (41%)
+2. Households with low income and high expenses (31%)
+3. Households with high income and low expenses (9%)
+4. Households with high income and high expenses (19%)
 
-These groups were generated using the average income and average expenses. We split the households into: below (or above) average income and below (or above) average expenses.
+We generated these groups using the average income and average expenses, by splitting the households into: below (or above) average income and below (or above) average expenses.
 
 From the age distribution of the household groups, we can make a few interesting observations. Among the households with the youngest members there is not a lot of variety in the income-expenses balance. Among the households with members of younger working ages high expenses seem to dominate. As we move to the households with older members lower expenses are more prevalent.
-
-
-
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_65.html"></iframe>
 {% endraw %}
 
-#### Marital Status
 
-For clarification, according to the dataset documentation the marital status codes `A`, `B`, and `U` stand for `Married`, `Single` and `Unknown` respectively. Interestingly, this plot efficiently captures classical differences between married and single life, as we observe that households with married members have more often lower income and must balance with lower expenses, while it is completely opposite for single member households, as they more frequently have higher income and are able to indulge in higher expenses. 
+#### Marital Status (watch out...it's a trap!!!)
 
+The datasets we used also contains information about the marital status of the individual households.  They are divided into: 
+1. `A` or *Married*
+2. `B` or *Single*
+3. `U` or *Divorced*
+
+The following plot very effectively illustrates the usual differences between "single" and "married" life. We observed that households with married members have more often lower income and must balance with lower expenses, while the opposite is true for single member households, as they more frequently have higher income and are able to indulge in higher expenses. 
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_66.html"></iframe>
@@ -215,29 +216,37 @@ For clarification, according to the dataset documentation the marital status cod
 
 #### Homeowner Type
 
-Analyzing the distribution of the type of homeownership we again obtain expected results, as it is understandable that it is most probable for households who are able to afford their own place of residence to have higher income and expenses, while renters usually have better sense of utilizing their limited income. 
+Another interesting future included in the dataset is, whether families own or rent the property they live in. 
+It is understandable that households, which are able to afford their own place of residence, entail probability of a higher income and expenses, while renters usually have better sense of utilizing their limited income.
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_67.html"></iframe>
 {% endraw %}
 
 #### Household Composition
-Among the different household compositions recorded in the data, we do not observe a lot of variety and this feature is not a good discriminator. However, we do observe two interesting discrepancies which can also be expected: couples with no children have the highest chance to be in the group with the highest income and expenses, while single parents tend to have a "harder time".
 
+When considering the different household compositions indicated in the data, we do not observe a great variety of the results. 
+This feature doesn't seemt o be a good discriminator. 
+However, we do observe two interesting discrepancies which can also be expected: couples with no children have the highest chance to be in the group with the highest income and expenses, while single parents have a harder time paying their bills.
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_68.html"></iframe>
 {% endraw %}
 
 #### Household Size
-The household size feature also displays very little significance for group distinction across different values. However, we can observe a trend that as the household size increases the probability of having lower income and expenses decreases, as only households with higher income can afford to have more children, but with that their expenses also increase.
+The size of a given household also displays very little effect on the spending habits. 
+However, we can observe a trend which demonstrates us that the probability of having lower income and expenses decreases as the household size increases. 
+This is so because only households with higher income can afford to have more children. 
+Nevertheless, this circumstance makes their expenses increase as well.
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_69.html"></iframe>
 {% endraw %}
 
-#### Number of Children
-The demographic records for the number of children can be inferred from previous features such as household size and household composition and as such in the plot we observe a similar trend as in the previous analysis of household size.
+#### The tradeoff between having children and having money
+We can infer the demographic records for the number of children from other features such as household size and household composition. 
+In this context, we observe in the plot a similar trend as in the previous analysis of a household size.
+Having children costs money!
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_70.html"></iframe>
