@@ -12,6 +12,11 @@ When you look back at the last decade of your life, what do you see? Which are t
 
 Let’s face it: grocery shopping is not a skill most of us would intentionally invest effort in pursuing. Nevertheless, people quite often find themselves in an unpleasant situation. Picture this! You want to prepare amazing spicy devil eggs for the movie night with your friends, but you're missing chilli peppers and apple cider vinegar. Next thing, you find yourself in the super market looking for what you went for in the first place, but shiny packages and beautiful colors are occupying your attention and your senses. Suddenly, you return home with two bags of groceries, and guess what! - you didn't buy jalapeños and vinegar! Why is it like that? Well, not having sometimes a clear idea about our inventory state, we end up being tempted into all sorts of treats that are over and above our necessities. Or, we plan to showcase our cooking abilities by preparing a plentiful lunch with several courses. So, we go shopping for various and numerous products - many of which we don't need or are not needed in that quantity. Guided by our instinct and instant desires when grocery shopping, rather than being prepared and aware of what we really need, we end up with the fridge full of everything, often surprised by the number of items which have to be thrown away because expiration date passed two months ago! 
 
+
+![alt text1][interstellar]
+
+[interstellar]: Figures/interstellar.jpeg "Title Text"
+
 Through this story, we aim to address the following research question: What is the interplay between income and expenses? In particular, we are interested in the following: How do households choose to organize their limited annual income according to their shopping expenses? Can we infer different household types based on the relation between their income and transaction statistics? Are there some demographic properties of the household's indicators of this relation as well? To begin answering our questions, we first perform data exploration on the Dunnhumby dataset. 
 #### This dataset contains the following information: 
 1. Demographic information, including annual income, family size, homeownership (...);
@@ -38,6 +43,10 @@ Through this story, we aim to address the following research question: What is t
 # **1. Are you sure you're earning enough to buy that fancy organic avocado?**
 ## *You know, not everyone is in the top 1%...[^1]*
 [^1]: 99% of all people are not in the top 1%, to be precise :)
+
+![alt text1][avocado]
+
+[avocado]: Figures/avocado.jpg "Title Text"
 
 As expected, our analysis demonstrated that one of the major factors in detecting the household expenses is the annual income of a given household. The main challenge in utilizing this information from the datasets was the fact that we didn't have exact nummeric data about the household incomes. Instead, we were provided only with different income categories. On the bright side, there is a meaningful order in the categories as they are intervals. The most challenging thing here was finding an appropiate nummerical representation for each income category. We did so by fitting the data to the lognormal distribution. Even before seeing the income distribution, we already assumed that it would be log-normal, as this is the usual distribution of positiv random variables. This follows from the central limit theorem, applied to variables which cannot be negative (like household income). 
 
@@ -254,3 +263,5 @@ Having children costs money!
 
 # **The big picture**
 *TODO: Add ML analyses*
+
+
