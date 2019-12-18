@@ -7,7 +7,7 @@ title: How to Ride the Shopping Cart
 permalink: /
 ---
 
-## Introduction
+# **Introduction**
 When you look back at the last decade of your life, what do you see? Which are the most imporant things that pop into your mind? Family vacation? Graduating from university? First kiss? Winning a competition? That moment when you, for the first time, held your baby in your arms? Or is it maybe some sad event, like loosing a loved one? While these situations significantly shape our lives and make us who we are today, life of each individual consists of other, "background" processes and occasions. They almost certainly don't come to our minds as being momentous, but they for sure affect our mood, relationships, and, overall, build our everyday life. One of these things is - you won't believe - grocery shopping! It follows, at first sight, that grocery shopping is such an irrelevant part of our life. After all, it is nothing more than a routine, right? Doing laundry, brushing your teeth, reading generic e-mails from some random EPFL associations you've never heard of... - it seems like this is all done in a self-acting manner, automatically and mechanically. However, if you take a closer look, grocery shopping imposes heavy demands on our time, and has a direct impact on what we eat, how we spend our money and manage our time, which consequently influences our social life and well-being as a whole.
 
 Let’s face it: grocery shopping is not a skill most of us would intentionally invest effort in pursuing. Nevertheless, people quite often find themselves in an unpleasant situation. Picture this! You want to prepare amazing spicy devil eggs for the movie night with your friends, but you're missing chilli peppers and apple cider vinegar. Next thing, you find yourself in the super market looking for what you went for in the first place, but shiny packages and beautiful colors are occupying your attention and your senses. Suddenly, you return home with two bags of groceries, and guess what! - you didn't buy jalapeños and vinegar! Why is it like that? Well, not having sometimes a clear idea about our inventory state, we end up being tempted into all sorts of treats that are over and above our necessities. Or, we plan to showcase our cooking abilities by preparing a plentiful lunch with several courses. So, we go shopping for various and numerous products - many of which we don't need or are not needed in that quantity. Guided by our instinct and instant desires when grocery shopping, rather than being prepared and aware of what we really need, we end up with the fridge full of everything, often surprised by the number of items which have to be thrown away because expiration date passed two months ago! 
@@ -18,13 +18,13 @@ Let’s face it: grocery shopping is not a skill most of us would intentionally 
 [interstellar]: Figures/interstellar.jpeg "Title Text"
 
 Through this story, we aim to address the following research question: What is the interplay between income and expenses? In particular, we are interested in the following: How do households choose to organize their limited annual income according to their shopping expenses? Can we infer different household types based on the relation between their income and transaction statistics? Are there some demographic properties of the household's indicators of this relation as well? To begin answering our questions, we first perform data exploration on the Dunnhumby dataset. 
-#### This dataset contains the following information: 
+## This dataset contains the following information: 
 1. Demographic information, including annual income, family size, homeownership (...);
 2. Product information, including the manufacturer, product category (soft drinks, fruits, vegetables, ...), and other information;
 3. Information about transactions, including the purchased products, their prices, time of purchase (...).
 
 
-#### Amongst others, we expect the following factors to be decisive in how peole spend their annual income:
+## Amongst others, we expect the following factors to be decisive in how peole spend their annual income:
 1. Household income
     - In our dataset we have several categories ranging from below 15,000 to over 250,000 USD p.a.
 2. Shopping habits
@@ -73,7 +73,7 @@ By just looking at the above-given plot, one may already get the feeling that it
 # **2. Don't throw away your bills!**
 ## *Statistics is your friend...*
 
-#### Average bill amount
+### Average bill amount
 As our ultimate goal in this research is to be able to measure the spending habits of different households, we should, for that reason, compute the average amount of each household's bills. Every visit of a particular household to a store is uniquely identified in the dataset. We can do this in two steps:
 
 1. We sum the total bill amounts for each household. 
@@ -88,11 +88,17 @@ Here you can see the distribution of the average bill amount. On average, people
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_29.html"></iframe>
 {% endraw %}
+
+### Average number of products
+
 Concurrently, we are also interested in finding the average number of products purchased per household. Why is this important? The relevance of it is reflected through bills of a large families. This household category will always have higher bills per visit to the supermarket, simply because they have to buy food for more family members. At the same time, smaller and wealthier families (perhaps without childern), are expected to purchase fewer products, often for higher price. On average, people buy around 10 products per supermarket visit. 
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_31.html"></iframe>
 {% endraw %}
+
+### Average median product price
+
 While the average number of purchased products is a really good indicator of a households' spending habits, we argue that the average bill amount is actually dependent on two very different parameters. It is to be expected that the average number of products is proportional to the household size (after all, rich and poor families drink and eat rougly the same amounts of food[^y]). Simultaneously, the average price per purchased product is expected to be more closely related to the wealth of a given household (for example, wealthy families might be incited to purchase more expensive wine, or buy organic food). The total bill amount is roughly equal to the number of purchased products and to the price of the average product. Therefore, small wealthy families could have similar total bill amounts as poor large families. In this respect, we are interested in the distribution of the average median product price. We use the meadian for calulating the average, as it is more robust to outliers.  
 
 [^y]: Assuming nobody is starving due to the poverty in the United States
@@ -100,6 +106,8 @@ While the average number of purchased products is a really good indicator of a h
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_33.html"></iframe>
 {% endraw %}
+
+### Correlation analysis
 
 One of the first things we learned in elementary school is a precious rule applicable in a daily life: the average is equal to the sum divided by the quantity. When it comes to grocery shopping, this is no different. The average bill we pay in supermarkets will be dependent on how many items we purchase and what is their average price. Obviously, there exists a 1:1 correspondence between the number of purchased items and the total bill we have to pay at the checkout. As the variation in price of everyday items is not large, the variance is very small:
 
@@ -118,7 +126,6 @@ Things become less obvious when we compare the average median product price with
 ### Analysis of the Joint Distribution 
 Given our insight into how much money, on average, households spend during each visit to a supermarket and how the representative product price varies, we are interested to find out if the household income plays a crucial role in the spending habits. Our expectation is that it does, and that households with lower income spend less and buy cheaper (for example non-organic) products as opposed to households with higher income.
 
-#### Household Income vs. Spending habits
 Using a boxplot we can view the distribution of the statistic across each household income category and perform a comparison very efficiently.
 
 {% raw %}
@@ -138,7 +145,7 @@ This is relevant, as we expect wealthier households not necessarily to buy large
 
 # **3. Don't forget to exploit the weekend discounts!**
 
-#### Coupon usage
+### Coupon usage
 
 Our analysis showed that campaigns play a major role in how people spend their money. 
 In deriving the true amount of money that households spend on every visit to their local supermarket, we took into account the coupon value. 
@@ -156,7 +163,7 @@ While it is difficult to draw any certain conclusions, we can speculate that peo
 After all, that might be the reason why they have such high income. 
 At the same time, household with lower income might not be able to profit so much from discounts, as high-reward loyality programs are more benefitial to people who actually spend larger amounts of money. 
 
-#### Daily Expenses
+### Daily Expenses
 
 Interesting information can be found by looking into the day of the week when purchases have been made. 
 While we don't know the exact date (and thereby day of the week) from when the data was recorded, it is enough to group the transactions by the *day number* module *7*, in order to plot the transactions throughout an average week. 
@@ -170,7 +177,7 @@ While we cannot be certain about which day this weeks starts with, it is to be a
 # **4. Buy only what you need, or at least what you think you need.**
 ## *The types of products you buy can say a lot about you...*
 
-#### Most Purchased Product
+### Most Purchased Product
 
 We want to find out on which products the different households spent most of their income in, and how this depends on their income categories. After analyzing the data, we found that the households from every category spent most of their money on gasoline. Let us see the distribution in USD for every income category:
 
@@ -192,7 +199,7 @@ TODO: the Engles curves. Didn't we say we wanna use the ones from the main.ipynb
 
 # **5. Know who you are, but more importantly who you are not.**
 
-### Demographic Analysis of Household Groups
+## Demographic Analysis of Household Groups
 
 In order to understand how family values influence the balance between household's expenses and income, we will analyze the demographic properties across 4 groups of households:
 
@@ -203,6 +210,8 @@ In order to understand how family values influence the balance between household
 
 We generated these groups using the average income and average expenses, by splitting the households into: below (or above) average income and below (or above) average expenses.
 
+### Age
+
 From the age distribution of the household groups, we can make a few interesting observations. Among the households with the youngest members there is not a lot of variety in the income-expenses balance. Among the households with members of younger working ages high expenses seem to dominate. As we move to the households with older members lower expenses are more prevalent.
 
 {% raw %}
@@ -210,7 +219,7 @@ From the age distribution of the household groups, we can make a few interesting
 {% endraw %}
 
 
-#### Marital Status (watch out...it's a trap!!!)
+### Marital Status (watch out...it's a trap!!!)
 
 The datasets we used also contains information about the marital status of the individual households.  They are divided into: 
 1. `A` or *Married*
@@ -223,7 +232,7 @@ The following plot very effectively illustrates the usual differences between "s
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_67.html"></iframe>
 {% endraw %}
 
-#### Homeowner Type
+### Homeowner Type
 
 Another interesting future included in the dataset is, whether families own or rent the property they live in. 
 It is understandable that households, which are able to afford their own place of residence, entail probability of a higher income and expenses, while renters usually have better sense of utilizing their limited income.
@@ -232,7 +241,7 @@ It is understandable that households, which are able to afford their own place o
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_68.html"></iframe>
 {% endraw %}
 
-#### Household Composition
+### Household Composition
 
 When considering the different household compositions indicated in the data, we do not observe a great variety of the results. 
 This feature doesn't seemt o be a good discriminator. 
@@ -242,7 +251,7 @@ However, we do observe two interesting discrepancies which can also be expected:
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_69.html"></iframe>
 {% endraw %}
 
-#### Household Size
+### Household Size
 The size of a given household also displays very little effect on the spending habits. 
 However, we can observe a trend which demonstrates us that the probability of having lower income and expenses decreases as the household size increases. 
 This is so because only households with higher income can afford to have more children. 
@@ -252,7 +261,7 @@ Nevertheless, this circumstance makes their expenses increase as well.
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_70.html"></iframe>
 {% endraw %}
 
-#### The tradeoff between having children and having money
+### The tradeoff between having children and having money
 We can infer the demographic records for the number of children from other features such as household size and household composition. 
 In this context, we observe in the plot a similar trend as in the previous analysis of a household size.
 Having children costs money!
