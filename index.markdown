@@ -8,30 +8,30 @@ permalink: /
 ---
 
 ## Introduction
-When you look back at the last decade of your life, which are the most imporant things that come to you mind? Family vacations? Graduating from university Your first kiss? That one time in high school when you won a really important competition? Or maybe some sad event, like loosing a loved one? Well...we know one thing which almost certainly did't come to your mind. Grocery shopping! While we think about what we have to cook and what we have to buy almost every single day, it seems like such an irrelevant part of our life. Just like doing loundry, or bushing your teeth, or reading generic emails from some random associations at EPFL you've never heard off, ...
+When you look back at the last decade of your life, what do you see? Which are the most imporant things that pop into your mind? Family vacation? Graduating from university? First kiss? Winning a competition? That moment when you, for the first time, held your baby in your arms? Or is it maybe some sad event, like loosing a loved one? While these situations significantly shape our lives and make us who we are today, life of each individual consists of other, "background" processes and occasions. They almost certainly don't come to our minds as being momentous, but they for sure affect our mood, relationships, and, overall, build our everyday life. One of these things is - you won't believe - grocery shopping! It follows, at first sight, that grocery shopping is such an irrelevant part of our life. After all, it is nothing more than a routine, right? Doing laundry, brushing your teeth, reading generic e-mails from some random EPFL associations you've never heard of... - it seems like this is all done in a self-acting manner, automatically and mechanically. However, if you take a closer look, grocery shopping imposes heavy demands on our time, and has a direct impact on what we eat, how we spend our money and manage our time, which consequently influences our social life and well-being as a whole.
 
-Let’s face it: grocery shopping is not a skill most of us intentionally invested effort in pursuing. However, people more than often find themselves in situations where they return home with two bags of groceries and realize that they are missing the only item they initially were out for. Sometimes, not having a clear idea about our inventory state, we end up being tempted into the all sorts of treats that are over and above our necessities. Or we buy products to showcase our cooking abilities for the family dinner but somehow, we end up with the fridge full of everything, hoping to roll up our sleeves tomorrow. We are often surprised by the number of items we throw away because the expiration date passed two months ago! 
+Let’s face it: grocery shopping is not a skill most of us would intentionally invest effort in pursuing. Nevertheless, people quite often find themselves in an unpleasant situation. Picture this! You want to prepare amazing spicy devil eggs for the movie night with your friends, but you're missing chilli peppers and apple cider vinegar. Next thing, you find yourself in the super market looking for what you went for in the first place, but shiny packages and beautiful colors are occupying your attention and your senses. Suddenly, you return home with two bags of groceries, and guess what! - you didn't buy jalapeños and vinegar! Why is it like that? Well, not having sometimes a clear idea about our inventory state, we end up being tempted into all sorts of treats that are over and above our necessities. Or, we plan to showcase our cooking abilities by preparing a plentiful lunch with several courses. So, we go shopping for various and numerous products - many of which we don't need or are not needed in that quantity. Guided by our instinct and instant desires when grocery shopping, rather than being prepared and aware of what we really need, we end up with the fridge full of everything, often surprised by the number of items which have to be thrown away because expiration date passed two months ago! 
 
-In this story we try to address the following research question: What is the interplay between income and expenses? In particular, we are interested in the following: How do households choose to organize their limited annual income according to their shopping expenses? Can we infer different household types based on the relation between their income and transaction statistics? Are some demographic properties of the household's indicators of this relation as well? To begin answering our questions, we first perform data exploration on the Dunnhumby dataset. 
+Through this story, we aim to address the following research question: What is the interplay between income and expenses? In particular, we are interested in the following: How do households choose to organize their limited annual income according to their shopping expenses? Can we infer different household types based on the relation between their income and transaction statistics? Are there some demographic properties of the household's indicators of this relation as well? To begin answering our questions, we first perform data exploration on the Dunnhumby dataset. 
 #### This dataset contains the following information: 
-1. Demographic information, including annual income, family size, homeownership, ...
-2. Product information, including the manufactur, product category (soft drinks, fruits, vegetables, ...) and other information
-3. Information about transactions, including the products bought, their prices, time of purchase, ....
+1. Demographic information, including annual income, family size, homeownership (...);
+2. Product information, including the manufacturer, product category (soft drinks, fruits, vegetables, ...), and other information;
+3. Information about transactions, including the purchased products, their prices, time of purchase (...).
 
 
-#### Amogst others, we expect the following factors to be decisive in how peole spend their annual income:
-1. Household income:
+#### Amongst others, we expect the following factors to be decisive in how peole spend their annual income:
+1. Household income
     - In our dataset we have several categories ranging from below 15,000 to over 250,000 USD p.a.
 2. Shopping habits
     - It mainly depends on the day of the week
 2. Advertisement campaigns
     - Some households take active participation in campaigns which significantly lowers the expenses
 3. Products vary in price
-    - Some products are much more expensive than others, nonetheless their purchase is unavoidable
-4. Households preferences
-    - Households with lower income tend to buy low-budget goods, as opposed to households with higher income that buy high-end goods (like organic food)
+    - Some products are much more expensive than others; nonetheless, their purchase is unavoidable
+4. Household's preferences
+    - Households with lower income tend to buy low-budget goods, as opposed to households with higher income which seek to purchase high-end goods (like organic food)
 5. Demographics
-6. Number and ages of children in the family
+6. Number and age of children in the family
 
 
 
@@ -39,21 +39,21 @@ In this story we try to address the following research question: What is the int
 ## *You know, not everyone is in the top 1%...[^1]*
 [^1]: 99% of all people are not in the top 1%, to be precise :)
 
-As expected, our analysis showed that one of the major factors in determining the household expenses is the annual income of a given household. The main challange in utilizing this information from the datasets was the fact that we didn't have exact nummeric data about the household incomes. Instead, we were provided only with different income categories. Looking on the bright side, there is meaningful ordering of the categories as they are intervals. The main challenge here was finding an appropiare nummerical representation for each income category. We did so by fitting the data to the lognormal distribution. Even before seeing the income distirbution, we already assumeed that it would be log-normal, as this is the usual distribution of positiv random variables. This follows from the central limit theorem, applied to variables which cannot be negative (like household income). 
+As expected, our analysis demonstrated that one of the major factors in detecting the household expenses is the annual income of a given household. The main challenge in utilizing this information from the datasets was the fact that we didn't have exact nummeric data about the household incomes. Instead, we were provided only with different income categories. On the bright side, there is a meaningful order in the categories as they are intervals. The most challenging thing here was finding an appropiate nummerical representation for each income category. We did so by fitting the data to the lognormal distribution. Even before seeing the income distribution, we already assumed that it would be log-normal, as this is the usual distribution of positiv random variables. This follows from the central limit theorem, applied to variables which cannot be negative (like household income). 
 
-Naively, we could simply plot the number of households contained  within every income category and get the following plot:
+Namely, we could simply plot the number of households contained within every income category, and get the following plot:
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_20.html"></iframe>
 {% endraw %}
 
-While there is nothing wrong with this plot on first sight, careful analysis reveils a large problem with it: The bins are not equidistant. That is, in the second lowest bin (15-24K), there is only a range of 9,000 USD, while in the scond highest bin (200-249 USD), there is 49,000 USD income range. Therefore, it is biased towards bins of larger range. For a fair plot, we need to divide all the bins by their range. That way, we get an approximate *income distribution density* of the number of households per 1,000 USD income range. As the data is non-nummeric, we will still not be able to get a nice and continues distribution of the income, but at least it will be unbiased towards larger bins. 
+Whilst there is nothing wrong with this plot on the first sight, in-close analysis reveils a large problem with it: the bins are not equidistant. That is, in the second lowest bin (15-24K) there is only a range of 9,000 USD, while there is 49,000 USD income range in the second highest bin (200-249 USD). Accordingly, it is biased towards bins of a larger range. For a fair plot, we need to divide all the bins by their range. By doing that, we get an approximate *income distribution density* of the number of households per 1,000 USD income range. Since the data is non-nummeric, we still won't be able to get a nice and continuous distribution of the income, but at least it will be unbiased towards larger bins. 
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_25.html"></iframe>
 {% endraw %}
 
-By just looking at this plot, we already get the feeling that it looks like the log-normal distribution. In order to actually verify this, we need to use maximum likelihood estimation to infer the parameters of the lognormal distribution. As the income categories are still non-numerical values, we also need to convert them into numbers. Naively, we were tempted to simple take the average between the lower and the upper bound of every bin. However, given that the data approximately follows a lognormal distribution, we have to use the geometric mean of the upper and lower bound (easy to prove) [^x].
+By just looking at the above-given plot, one may already get the feeling that it looks like the log-normal distribution. In order to actually verify this, we need to use the maximum likelihood estimation to infer the parameters of the log-normal distribution. Given that the income categories are still non-numerical values, we must convert them into numbers. Naively, we were tempted to simply take the average value of the lower and the upper bound of each bin. However, bearing in mind that the data approximately follows a log-normal distribution, we have to use the geometric mean of the upper and lower bound (easy to prove) [^x].
 
 [^x]: The proof is left to the reader
 
@@ -65,12 +65,12 @@ By just looking at this plot, we already get the feeling that it looks like the 
 ## *Statistics is your friend...*
 
 #### Average bill amount
-In order to measure the spending habits of different households, we compute the average amount of each households' bills. Every household visit to a store is uniquely identified in the dataset. We can do this in two steps:
+As our ultimate goal in this research is to be able to measure the spending habits of different households, we should, for that reason, compute the average amount of each household's bills. Every visit of a particular household to a store is uniquely identified in the dataset. We can do this in two steps:
 
 1. We sum the total bill amounts for each household. 
-2. We average across all visits a given houshold made over the whole time period.
+2. We average across all visits which a given houshold made over the whole time period.
 
-Here you can see the distribution of the average bill amount. On average, people spend around 30 USD per visit to a local supermarket. However, there are several outliers and this is futher investigated later in the analysis. 
+Here you can see the distribution of the average bill amount. On average, people spend around 30 USD per visit to a local supermarket. However, there are several outliers. This is furtherly investigated later on in the analysis. 
 
 [//]: # ( {% raw %} <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_16.html"></iframe> {% endraw %})
 
@@ -79,26 +79,26 @@ Here you can see the distribution of the average bill amount. On average, people
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_29.html"></iframe>
 {% endraw %}
-At the same time, we are also interested in finding the average number of products purchased per household. This is relevant as large families will always have higher bills per visit to the supermarket, simply because they have to buy food for more family members. At the same time, smaller and wealthier families (perhaps without childern), are expected to purchase fewer products but often for higher prices. On average, people buy around 10 producs per supermarket visit. 
+Concurrently, we are also interested in finding the average number of products purchased per household. Why is this important? The relevance of it is reflected through bills of a large families. This household category will always have higher bills per visit to the supermarket, simply because they have to buy food for more family members. At the same time, smaller and wealthier families (perhaps without childern), are expected to purchase fewer products, often for higher price. On average, people buy around 10 products per supermarket visit. 
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_31.html"></iframe>
 {% endraw %}
-While the average number of producs purchased is a very good indicatior of a households' spending habits, we argue that the avarege bill amount is actualy dependend ot two very different parameters. It is to be expected that the average numebr of products is proportional to the household size (after all, rich and poor families drink and eat rougly the same amounts of food[^y]). At the same time, the average price per product purchased, is expected to be closer related to the wealth of a given household (for example, wealthy families might be inclined to purchase more expensive wine, or buy organic food). The total bill amount, is rougly equal to the numbe of producs purchased, and the price of the average product. Therefore small wealthy families could have similar total bill amounts as poor large families.  Therefore, we are interested in the distribution of the average median product price. We use the meadian for calulating the average, as it is more robust to outliers.  
+While the average number of purchased products is a really good indicator of a households' spending habits, we argue that the average bill amount is actually dependent on two very different parameters. It is to be expected that the average number of products is proportional to the household size (after all, rich and poor families drink and eat rougly the same amounts of food[^y]). Simultaneously, the average price per purchased product is expected to be more closely related to the wealth of a given household (for example, wealthy families might be incited to purchase more expensive wine, or buy organic food). The total bill amount is roughly equal to the number of purchased products and to the price of the average product. Therefore, small wealthy families could have similar total bill amounts as poor large families. In this respect, we are interested in the distribution of the average median product price. We use the meadian for calulating the average, as it is more robust to outliers.  
 
-[^y]: Assuming nobody is starving due to poverty in the United States
+[^y]: Assuming nobody is starving due to the poverty in the United States
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_33.html"></iframe>
 {% endraw %}
 
-As we all learned in elementary school: the average is equal to the sum divided by the quantity. When it comes to grocery shopping, this is no different. The average bill we pay in supermarkets will be dependent on how many items we purchase, and what their average price is. Obviously, there exists a 1:1 correspondince between the number of items purchased and the total bill we have to pay at chechout. As the variation in price of everyp-day items is not large, the variance is vary small:
+One of the first things we learned in elementary school is a precious rule applicable in a daily life: the average is equal to the sum divided by the quantity. When it comes to grocery shopping, this is no different. The average bill we pay in supermarkets will be dependent on how many items we purchase and what is their average price. Obviously, there exists a 1:1 correspondence between the number of purchased items and the total bill we have to pay at the checkout. As the variation in price of everyday items is not large, the variance is very small:
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_35.html"></iframe>
 {% endraw %}
 
-Things become less obvjous, when we compare the average median product price, with the average bill amount. The main factor causing uncertainty here is the number of products, which warries greatly. It depends on how often we go shopping and how many family members we need to feed with one trip to the local supermarket. Therefore, we have a very significant varriance in the following plot:
+Things become less obvious when we compare the average median product price with the average bill amount. The main factor which causes uncertainty here is the number of products, which varies greatly. It depends on how often we go shopping and how many family members we need to feed with a one "go" to the local supermarket. Thereby, we have a very significant variance in the following plot:
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_34.html"></iframe>
 {% endraw %}
@@ -125,7 +125,7 @@ We also created the same plot for the average median product price:
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_41.html"></iframe>
 {% endraw %}
-This is relevant, as we expect weathier households not necessarily to buy larger quanitites of products (which is mostly responsible for the average bill amount), but rather to purchase individual more expensive items. 
+This is relevant, as we expect wealthier households not necessarily to buy larger quanitites of products (which is mostly responsible for the average bill amount), but rather to purchase individual more expensive items. 
 
 # **3. Don't forget to exploit the weekend discounts!**
 
