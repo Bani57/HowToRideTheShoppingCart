@@ -107,18 +107,18 @@ Things become less obvjous, when we compare the average median product price, wi
 
 
 ### Analysis of the Joint Distribution 
+Given our insight into how much money, on average, households spend during each visit to a supermarket and how the representative product price varies, we are interested to find out if the household income plays a crucial role in the spending habits. Our expectation is that it does, and that households with lower income spend less and buy cheaper (for example non-organic) products as opposed to households with higher income.
 
-Now that we have insight on how much money, on average, people spend on each visit to the store and how does the representative product price bought vary, we are interested to see does the household income play a crucial role in this. Our expectation is that it does, and that households with lower income spend less and buy cheaper products as opposed to households with higher income.
-
-#### Household Income vs. Average Bill Amount
+#### Household Income vs. Spending habits
 Using a boxplot we can view the distribution of the statistic across each household income category and perform a comparison very efficiently.
-
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_37.html"></iframe>
 {% endraw %}
 
-To our surprise, extreme spending are mostly observed for medium and lower income households. This be just due to the fact that there are significantly more househlolds in the average-income range, so we also expect more outliers. At the same time, in the highest-income categories, there are just a few households, so it is unlikely to find any extreme outliers. 
+It is surprizing to see, that  extreme spending were mostly observed for medium and lower income households. After having a closer look at the data, we found out that this is mainly due to the fact that there are significantly more househlolds in the average-income range, as in the high-income range[^k]. Therefore, we also expect more outliers in the average-income range.
+
+[^k]: That's why we call them the "top 1%" and not the "top 40%"
 
 We also created the same plot for the average median product price:
 
@@ -127,7 +127,7 @@ We also created the same plot for the average median product price:
 {% endraw %}
 
 
-# **3. Don't forget to exploit those weekend discounts!**
+# **3. Don't forget to exploit the weekend discounts!**
 ## *Is this even necessary to mention...*
 
 #### Coupon usage
