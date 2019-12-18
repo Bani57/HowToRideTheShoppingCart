@@ -125,24 +125,32 @@ We also created the same plot for the average median product price:
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_41.html"></iframe>
 {% endraw %}
-
+This is relevant, as we expect weathier households not necessarily to buy larger quanitites of products (which is mostly responsible for the average bill amount), but rather to purchase individual more expensive items. 
 
 # **3. Don't forget to exploit the weekend discounts!**
-## *Is this even necessary to mention...*
 
 #### Coupon usage
 
-We noticed that campaigns play a major role in how people spend their money. In deriving the true amount of money that households spend on every visit to the store, we took into account the coupon value. But what is the total amount used and does it vary with the income category?
+Our analysis showed that campaigns play a major role in how people spend their money. 
+In deriving the true amount of money that households spend on every visit to their local supermarket, we took into account the coupon value. 
+Households which regularly participate in loyality programs, may end up paying less money, even if they purchase more expensive products. 
+Let us find out what the total amount of coupons used is and it varies with annual income!
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_44.html"></iframe>
 {% endraw %}
 
-Coupon value is negative, since it gives a discount to the price. On this bar plot, we see a somewhat unexpected trend. People with medium to upper medium income use more coupons as opposed to the people with lower income. Interesting sight is that people with high income are also heavy users of coupons.
+The reason why coupon values are negative is, becasue they decrease the final bill. On this bar plot, we see a somewhat unexpected trend. 
+People with medium to upper medium income use more coupons as opposed to the people with lower income. 
+Interesting sight is that people with high income are also heavy users of coupons. 
+While it is difficult to draw any certain conclusions, we can speculate that people with high income are more careful with what they spend money on. 
+After all, that might be the reason why they have such high income. 
+At the same time, household with lower income might not be able to profit so much from discounts, as high-reward loyality programs are more benefitial to people who actually spend larger amounts of money. 
 
 #### Daily Expenses
 
-Interesting information can be found by looking into the day of the week when purchases have been made. While we don't know the exact date (and thereby day of the week) from when the data was recorded, it is enough to group the transactions by the *day number* module *7*, in order to plot the transactions throughout an average week. 
+Interesting information can be found by looking into the day of the week when purchases have been made. 
+While we don't know the exact date (and thereby day of the week) from when the data was recorded, it is enough to group the transactions by the *day number* module *7*, in order to plot the transactions throughout an average week. 
 
 {% raw %}
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_46.html"></iframe>
