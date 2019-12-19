@@ -175,9 +175,13 @@ We want to find out on which products the different households spent most of the
 
 The distribution is highly concentrated around the middle to upper middle income categories. The reason is that households with lower income can't afford owning a vehicle, however the reason for the upper income is somewhat unclear. It could be that they use other means of transportation required by their job.
 
+### Flow of expenses between income and product categories
+
 Setting gasoline aside, we are also interested in how the expenses are distributed in the other product categories. Take a gander at the beautiful plot below! It is an excellent way to visualize flow of information between two subsets. From it, we have a clear idea about how the expenses from income groups map to product categories and we used only the 200 most purchased products ordered by their quantity for this.
 
 <img class="image" src="Figures/sankey.png">
+
+### Engel curves
 
 After visualizing how the quantity of the purchased products is distributed we can search for patterns in the expenditure, by calling on a principle from microeconomics, called Engel curves. These plots represent one particular way of determining how household expenditure, on a particular good or service, varies with household income. Engel curves on the x-axis have the income category and on the y-axis the quantity of the measured product. We can infer some type of goods using these curves.
 
@@ -213,7 +217,7 @@ From the age distribution of the household groups, we can make a few interesting
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_66.html"></iframe>
 {% endraw %}
 
-### Marital Status (watch out...it's a trap!!!)
+### Marital Status
 
 The following plot very effectively illustrates the usual differences between "single" and "married" life. We observed that households with married members have more often lower income and must balance with lower expenses, while the opposite is true for single member households, as they more frequently have higher income and are able to indulge in higher expenses. 
 
