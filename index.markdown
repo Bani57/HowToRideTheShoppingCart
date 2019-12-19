@@ -12,7 +12,7 @@ When you look back at the last decade of your life, what do you see? Which are t
 
 Let’s face it: grocery shopping is not a skill most of us would intentionally invest effort in pursuing. Nevertheless, people quite often find themselves in an unpleasant situation. Picture this! You want to prepare amazing spicy deviled eggs for the movie night with your friends, but you're missing chilli peppers and apple cider vinegar. Next thing, you find yourself in the super market looking for what you went for in the first place, but shiny packages and beautiful colors are occupying your attention and your senses. Suddenly, you return home with two bags of groceries, and guess what! - you didn't buy jalapeños and vinegar! Why is it like that? Well, not having sometimes a clear idea about our inventory state, we end up being tempted into all sorts of treats that are over and above our necessities. Or, we plan to showcase our cooking abilities by preparing a plentiful lunch with several courses. So, we go shopping for various and numerous products - many of which we don't need or are not needed in that quantity. Guided by our instinct and instant desires when grocery shopping, rather than being prepared and aware of what we really need, we end up with the fridge full of everything, often surprised by the number of items which have to be thrown away because the expiration date passed two months ago! 
 
-<img class="image" src="Figures/interstellar.jpeg">
+<img class="meme" src="Figures/interstellar.jpeg">
 
 Through this story, we aim to address the following research question: What is the interplay between income and expenses, and how can it be used to help households organize their shopping? In particular, we are interested in the following aspects: How do households choose to organize their limited annual income according to their shopping expenses? Can we infer different household types based on the relation between their income and transaction statistics? Are there some demographic properties of the household's indicators of this relation as well?
 
@@ -31,7 +31,7 @@ The [Dunnhumby dataset](https://www.dunnhumby.com/careers/engineering/sourcefile
 ## *You know, not everyone is in the top 1%...[^1]*
 [^1]: 99% of all people are not in the top 1%, to be precise :)
 
-<img class="image" src="Figures/avocado.jpg">
+<img class="meme" src="Figures/avocado.jpg">
 
 As expected, our analysis demonstrated that one of the major factors in detecting the household expenses is the annual income of a given household. The main challenge in utilizing this information from the datasets was the fact that we didn't have exact numeric data about the household incomes. Instead, we were provided only with different income categories. On the bright side, there is a meaningful order in the categories as they are intervals. The most challenging thing here was finding an appropriate numerical representation for each income category. We did so by fitting the data to the lognormal distribution. Even before seeing the income distribution, we already assumed that it would be log-normal, as this is the usual distribution of positive random variables. This follows from the central limit theorem, applied to variables which cannot be negative (like household income). 
 

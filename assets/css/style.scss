@@ -49,10 +49,18 @@ a, .footnote, .reversefootnote {
 	color: crimson;
 }
 
-.image {
-	width: 100%;
+.meme {
+	display: block;
+	width: 50%;
 	margin: auto;
 }
+
+.image {
+	display: block;
+	width: 75%;
+	margin: auto;
+}
+
 
 hr {
 	background-color: crimson !important;
