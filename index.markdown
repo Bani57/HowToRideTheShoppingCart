@@ -245,11 +245,6 @@ While we cannot be certain about which day this weeks starts with, it is to be a
 # **4. Buy only what you need, or at least what you think you need.**
 ## *The types of products you buy can say a lot about you...*
 
-<details>
-<summary></summary>
-<img class="meme" src="Figures/only_two_things.jpeg">
-</details>
-
 ### Most Purchased Product
 
 We want to find out on which products the different households spent most of their income in, and how this depends on their income categories. After analyzing the data, we found that the households from every category spent most of their money on... *gasoline* ?! Makes sense as everyone needs to get from A to B, right? Let us see the distribution in USD for every income category:
