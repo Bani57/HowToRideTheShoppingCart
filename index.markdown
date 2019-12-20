@@ -36,7 +36,10 @@ Or, we plan to showcase our cooking abilities by preparing a plentiful lunch wit
 So, we go shopping for various and numerous products -- many of which we don't need or are not needed in that quantity.
 Guided by our instinct and instant desires when grocery shopping, rather than being prepared and aware of what we really need, we end up with the fridge full of everything, often surprised by the number of items which have to be thrown away because the expiration date passed two months ago! 
 
+<details>
+<summary></summary>
 <img class="meme" src="Figures/interstellar.jpeg">
+</details>
 
 Through this story, we aim to address the following research question:
 What is the interplay between income and expenses, and how can it be used to help households organize their shopping?
@@ -62,7 +65,10 @@ You just have to follow these 5 simple steps:
 ## *You know, not everyone is in the top 1%...[^1]*
 [^1]: 99% of all people are not in the top 1%, to be precise :)
 
+<details>
+<summary></summary>
 <img class="meme" src="Figures/avocado.jpg">
+</details>
 
 As expected, our analysis demonstrated that one of the major factors in detecting the household expenses is the annual income of a given household.
 The main challenge in utilizing this information from the datasets was the fact that we didn't have exact numeric data about the household incomes.
@@ -238,6 +244,11 @@ While we cannot be certain about which day this weeks starts with, it is to be a
 
 # **4. Buy only what you need, or at least what you think you need.**
 ## *The types of products you buy can say a lot about you...*
+
+<details>
+<summary></summary>
+<img class="meme" src="Figures/only_two_things.jpeg">
+</details>
 
 ### Most Purchased Product
 
