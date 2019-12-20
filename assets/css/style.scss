@@ -22,7 +22,7 @@
 }
 
 .main-content {
-	max-width: 75%;
+	max-width: 62.5%;
 	margin: auto;
 	color: black;
 	text-align: justify;
@@ -51,17 +51,24 @@ a, .footnote, .reversefootnote {
 
 .meme {
 	display: block;
-	width: 50%;
+	width: 75%;
 	margin: auto;
 }
 
 .image {
 	display: block;
-	width: 75%;
+	width: 100%;
 	margin: auto;
 }
 
-
 hr {
 	background-color: crimson !important;
+}
+
+.footnotes {
+	font-size: smaller;
+}
+
+.site-footer {
+	border-top: solid 2px crimson;
 }
