@@ -165,7 +165,7 @@ Obviously, there exists a 1:1 correspondence between the number of purchased ite
 As the variation in price of everyday items is not large, the variance is very small:
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_34.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_35.html"></iframe>
 {% endraw %}
 
 Things become less obvious when we compare the average median product price with the average bill amount.
@@ -174,7 +174,7 @@ It depends on how often we go shopping and how many family members we need to fe
 Thereby, we have a very significant variance in the following plot:
 
 {% raw %}
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_35.html"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="./iframe_figures/figure_34.html"></iframe>
 {% endraw %}
 
 We observe that the average number of products is uncorrelated also with the average median product price.
